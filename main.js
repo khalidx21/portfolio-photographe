@@ -7,8 +7,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
-        console.log(title.value, description.value, url.value);
-
         const newProject = {
             title: title.value,
             description: description.value,
@@ -17,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         axios.post(`http://localhost:4000/projects`, newProject)
             .then(res => {
-                console.log(res.data);
+
+                showProjects();
                 form.reset();
 
             })
@@ -54,7 +53,7 @@ function deleteProject(id) {
     if (confirm('Are you sure you want to delete this project?')) {
         axios.delete(`http://localhost:4000/projects/${id}`)
             .then(res => {
-                console.log(res.data);
+                showProjects();
             })
             .catch(err => {
                 console.error(err)

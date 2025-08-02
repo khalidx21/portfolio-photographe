@@ -22,9 +22,6 @@ Thumbs.db
 dist/
 build/
 
-# JSON server database file (optional)
-db.json
-
 # Lock files (optional)
 package-lock.json
 yarn.lock

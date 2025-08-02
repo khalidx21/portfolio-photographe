@@ -1,0 +1,34 @@
+# Node modules
+node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor folders
+.vscode/
+.idea/
+
+# Env files
+.env
+.env.local
+
+# Output files
+dist/
+build/
+
+# JSON server database file (optional)
+db.json
+
+# Lock files (optional)
+package-lock.json
+yarn.lock
+
+# Cache
+.cache/
+.next/
